@@ -1,0 +1,54 @@
+{
+  "name": "charity-donation-blockchain-project",
+  "version": "1.0.0",
+  "description": "Charity Donation Tracking System: Transparent Impact Verification Using Blockchain",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "smoke": "hardhat run scripts/smoke.ts",
+    "demo": "hardhat run scripts/demo-full-lifecycle.ts",
+    "deploy:local": "hardhat run scripts/deploy.ts",
+    "db:migrate": "dotenv -e indexer/.env -- tsx indexer/migrate.ts",
+    "indexer:register": "dotenv -e indexer/.env -- tsx indexer/register-deployment.ts",
+    "indexer": "dotenv -e indexer/.env -- tsx indexer/index.ts",
+    "api:start": "npm --prefix api start",
+    "api:test": "npm --prefix api test",
+    "frontend:dev": "npm --prefix frontend run dev",
+    "frontend:build": "npm --prefix frontend run build"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pg": "^8.13.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/advika-n/charity-donation-blockchain-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/advika-n/charity-donation-blockchain-project/issues"
+  },
+  "homepage": "https://github.com/advika-n/charity-donation-blockchain-project#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.15",
+    "@nomicfoundation/hardhat-ignition": "^3.1.8",
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.7",
+    "@types/chai": "^5.2.3",
+    "@types/chai-as-promised": "^8.0.2",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.20.1",
+    "@types/pg": "^8.11.10",
+    "chai": "^6.2.2",
+    "dotenv-cli": "^11.0.0",
+    "ethers": "^6.17.0",
+    "forge-std": "github:foundry-rs/forge-std#v1.9.4",
+    "hardhat": "^3.13.0",
+    "mocha": "^11.8.0",
+    "tsx": "^4.19.2",
+    "typescript": "~6.0.3"
+  }
+}
